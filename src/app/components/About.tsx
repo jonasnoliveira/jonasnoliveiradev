@@ -1,6 +1,7 @@
 const About = () => {
   return (
     <section id="about" className="p-8 bg-base-100 text-center">
+      <div className="container max-w-6xl">
       <h2 className="text-3xl font-bold">Sobre mim</h2>
       <p className="mt-4">Sou Desenvolvedor de FullStack, com habilidades em desenvolvimento fullstack e ampla
         experiência na indústria de TI. Proficiente em metodologias ágeis como Kanban e Scrum, possuo experiência em
@@ -9,6 +10,7 @@ const About = () => {
         Limpo e técnicas de desenvolvimento como Técncica de Desenvolvimento Orientado a Testes (TDD), SOLID, para
         garantir soluções de software de alta qualidade, fácil manutenção.
       </p>
+      </div>
     </section>
   );
 };
