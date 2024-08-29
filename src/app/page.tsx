@@ -5,22 +5,24 @@ import About from "@/app/components/About";
 import Projects from "@/app/components/Projects";
 import Footer from "@/app/components/Footer";
 import Contact from "@/app/components/Contact";
+import Technologies from "@/app/components/Technologies";
 
 const Home = () => {
   return (
     <div>
       <Head>
         <title>Jonas Oliveira - Desenvolvedor FullStack</title>
-        <meta name="description" content="Portfólio de Jonas Oliveira" />
+        <meta name="description" content="Portfólio de Jonas Oliveira"/>
       </Head>
-      <Header />
+      <Header/>
       <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Contact />
+        <Hero/>
+        <About/>
+        <Technologies/>
+        <Projects/>
+        <Contact/>
       </main>
-      <Footer />
+      <Footer/>
     </div>
   );
 };
