@@ -1,4 +1,4 @@
-import {FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaFacebook} from 'react-icons/fa';
+import {FaLinkedin, FaGithub, FaEnvelope, FaPhone} from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -6,7 +6,6 @@ const Footer = () => {
       <nav className="grid grid-flow-col gap-4 mb-6">
         <a className="link link-hover" href={"#about"}>Sobre</a>
         <a className="link link-hover" href={"#technologies"}>Tecnologias</a>
-        <a className="link link-hover" href={"#projects"}>Projetos</a>
         <a className="link link-hover" href={"#contactUs"}>Fale Conosco</a>
       </nav>
       <nav className="mb-6">
