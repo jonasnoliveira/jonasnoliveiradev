@@ -1,5 +1,6 @@
 import ThemeToggle from "@/components/ThemeToggle";
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -31,12 +32,13 @@ const Header = () => {
         </div>
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost text-xl" aria-label={'Logo'}>
-          <Image src={'/logo.png'} width={'50'} height={'50'} alt={'Logo'} />
-          <span className={'text-3xl text-blue-900'}>
-          Jonas Oliveira
+        
+        <Link href={'/'} className="btn btn-ghost text-xl" aria-label="Logo">
+          <Image src={'/logo.png'} width={'50'} height={'50'} alt={'Logo'}/>
+          <span className={'text-3xl text-base-800'}>
           </span>
-        </a>
+          Jonas Oliveira
+        </Link>
       </div>
       <div className="navbar-end">
         
