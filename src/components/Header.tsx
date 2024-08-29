@@ -36,12 +36,11 @@ const Header = () => {
         <Link href={'/'} className="btn btn-ghost text-xl" aria-label="Logo">
           <Image src={'/logo.png'} width={'50'} height={'50'} alt={'Logo'}/>
           <span className={'text-3xl text-base-800'}>
-          </span>
           Jonas Oliveira
+          </span>
         </Link>
       </div>
       <div className="navbar-end">
-        
         <ThemeToggle/>
       </div>
     </header>
