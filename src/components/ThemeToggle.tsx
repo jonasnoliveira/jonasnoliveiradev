@@ -24,7 +24,7 @@ const ThemeToggle = () => {
   };
   
   return (
-    <label className="grid cursor-pointer place-items-center">
+    <label htmlFor="theme-toggle" aria-label={'toggleTheme'} className="grid cursor-pointer place-items-center">
       <input
         type="checkbox"
         onChange={toggleTheme}

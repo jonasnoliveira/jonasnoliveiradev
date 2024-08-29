@@ -10,16 +10,16 @@ const Footer = () => {
       </nav>
       <nav className="mb-6">
         <div className="grid grid-flow-col gap-4">
-          <a href="tel:+5535999746431" className="text-lg hover:underline">
+          <a href="tel:+5535999746431" className="text-lg hover:underline" aria-label="Número telefone para Jonas Oliveira">
             <FaPhone className="text-2xl mr-4 text-primary"/>
           </a>
-          <a href="mailto:jonasnoliveirabr@gmail.com" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:jonasnoliveirabr@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Enviar email para Jonas Oliveira">
             <FaEnvelope className="text-2xl mr-4 text-primary"/>
           </a>
-          <a href="https://www.linkedin.com/in/jonas-n-oliveira" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/jonas-n-oliveira" target="_blank" rel="noopener noreferrer" aria-label="Perfil LinkedIn de Jonas Oliveira">
             <FaLinkedin className="text-2xl mr-4 text-primary"/>
           </a>
-          <a href="https://github.com/jonasnoliveira" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/jonasnoliveira" target="_blank" rel="noopener noreferrer" aria-label="Perfil GitHub de Jonas Oliveira">
             <FaGithub className="text-2xl mr-4 text-primary"/>
           </a>
         </div>

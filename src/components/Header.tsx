@@ -6,7 +6,7 @@ const Header = () => {
     <header className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle" aria-label={'button-menu'}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -31,7 +31,7 @@ const Header = () => {
         </div>
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost text-xl">
+        <a className="btn btn-ghost text-xl" aria-label={'Logo'}>
           <Image src={'/logo.png'} width={'50'} height={'50'} alt={'Logo'} />
           <span className={'text-3xl text-blue-900'}>
           Jonas Oliveira
