@@ -25,8 +25,7 @@ const Header = () => {
             <li><a href={'#hero'}>Início</a></li>
             <li><a href={'#about'}>Sobre mim</a></li>
             <li><a href={'#technologies'}>Tecnologias</a></li>
-            <li><a href={'#projects'}>Projetos</a></li>
-            <li><a href={'#contacts'}>Contatos</a></li>
+            <li><a href={'#contactUs'}>Fale Conosco</a></li>
           </ul>
         </div>
       </div>

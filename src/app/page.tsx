@@ -2,11 +2,11 @@ import Head from "next/head";
 import Header from "@/app/components/Header";
 import Hero from "@/app/components/Hero";
 import About from "@/app/components/About";
-import Projects from "@/app/components/Projects";
 import Footer from "@/app/components/Footer";
 import Contact from "@/app/components/Contact";
 import Technologies from "@/app/components/Technologies";
 import ContactUs from "@/app/components/ContactUs";
+import FloatingWhatsAppButton from "@/app/components/FloatingWhatsAppButton";
 
 const Home = () => {
   return (
@@ -20,8 +20,7 @@ const Home = () => {
         <Hero/>
         <About/>
         <Technologies/>
-        <Projects/>
-        <Contact/>
+        <FloatingWhatsAppButton />
         <ContactUs/>
       </main>
       <Footer/>
