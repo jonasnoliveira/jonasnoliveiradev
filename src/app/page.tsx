@@ -1,12 +1,11 @@
 import Head from "next/head";
-import Header from "@/app/components/Header";
-import Hero from "@/app/components/Hero";
-import About from "@/app/components/About";
-import Footer from "@/app/components/Footer";
-import Contact from "@/app/components/Contact";
-import Technologies from "@/app/components/Technologies";
-import ContactUs from "@/app/components/ContactUs";
-import FloatingWhatsAppButton from "@/app/components/FloatingWhatsAppButton";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Footer from "@/components/Footer";
+import Technologies from "@/components/Technologies";
+import ContactUs from "@/components/ContactUs";
+import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
 
 const Home = () => {
   return (

@@ -1,4 +1,5 @@
-import ThemeToggle from "@/app/components/ThemeToggle";
+import ThemeToggle from "@/components/ThemeToggle";
+import Image from "next/image";
 
 const Header = () => {
   return (
@@ -30,7 +31,12 @@ const Header = () => {
         </div>
       </div>
       <div className="navbar-center">
-        <a className="btn btn-ghost text-xl">Jonas Oliveira</a>
+        <a className="btn btn-ghost text-xl">
+          <Image src={'/logo.png'} width={'50'} height={'50'} alt={'Logo'} />
+          <span className={'text-3xl text-blue-900'}>
+          Jonas Oliveira
+          </span>
+        </a>
       </div>
       <div className="navbar-end">
         
