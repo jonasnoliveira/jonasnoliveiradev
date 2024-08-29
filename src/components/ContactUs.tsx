@@ -1,6 +1,6 @@
-'use client'
+'use client';
 
-import { useForm } from 'react-hook-form';
+import {useForm} from 'react-hook-form';
 import {FaEnvelope, FaUser, FaEdit, FaPhone} from 'react-icons/fa';
 
 type FormData = {
@@ -12,11 +12,23 @@ type FormData = {
 };
 
 const ContactUs = () => {
-  const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<FormData>();
+  const {register, handleSubmit, formState: {errors, isSubmitting}} = useForm<FormData>();
   
   const onSubmit = async (data: FormData) => {
-    console.log(data);
-    alert('Mensagem enviada com sucesso!');
+    // Montar a mensagem para o WhatsApp
+    const message = `Nome: ${data.name}\nNúmero: ${data.phoneNumber}\nE-mail: ${data.email}\nAssunto: ${data.subject}\nMensagem: ${data.message}`;
+    
+    // Codificar a mensagem para ser usada em uma URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Número de WhatsApp (incluindo o código do país)
+    const whatsappNumber = '5535999746431'; // Inclui o código do Brasil 55
+    
+    // URL do WhatsApp com mensagem pré-preenchida
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    
+    // Redirecionar o usuário para o WhatsApp
+    window.open(whatsappURL, '_blank');
   };
   
   return (
@@ -43,7 +55,7 @@ const ContactUs = () => {
             </div>
             
             <div className="mb-4">
-              <label className="block text-sm font-medium mb-2" htmlFor="name">
+              <label className="block text-sm font-medium mb-2" htmlFor="phoneNumber">
                 Número
               </label>
               <div className="flex items-center border rounded gap-2">
@@ -110,11 +122,9 @@ const ContactUs = () => {
               {errors.message && <p className="text-red-500 text-sm">{errors.message.message}</p>}
             </div>
             
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 disabled:opacity-50"
-            >
+            <button type="submit"
+                    disabled={isSubmitting}
+                    className="bg-blue-700 text-white py-2 px-4 rounded hover:bg-blue-800 disabled:opacity-50">
               Enviar
             </button>
           </form>
