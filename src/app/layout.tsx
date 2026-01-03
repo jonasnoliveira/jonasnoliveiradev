@@ -1,12 +1,13 @@
-import {Inter} from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 
-const inter = Inter({subsets: ["latin"]});
+const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata() {
-  
+
   const keywords = ['Jonas Nogueira de Oliveira', 'Jonas Oliveira', 'Dev', 'Desenvolvedor', "Desenvolvedor FullStack"];
-  
+
   return {
     metadataBase: new URL('https://jonasoliveiradev.vercel.app/'),
     title: 'Jonas Oliveira - Desenvolvedor FullStack',
@@ -58,18 +59,22 @@ export async function generateMetadata() {
 }
 
 export default function RootLayout({
-                                     children,
-                                   }: Readonly<{
+  children,
+}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="pt-BR">
-    <head>
-      <meta charSet="UTF-8"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1"/>
-      <title> Jonas Oliveira - Desenvolvedor FullStack </title>
-    </head>
-    <body className={inter.className}>{children}</body>
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title> Jonas Oliveira - Desenvolvedor FullStack </title>
+      </head>
+      <body className={inter.className}>
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
   );
 }

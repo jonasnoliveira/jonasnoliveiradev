@@ -1,16 +1,43 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
+
 const About = () => {
+  const { t } = useLanguage();
   return (
-    <section id="about" className="p-8 bg-base-100 text-center">
-      <div className="container max-w-6xl">
-      <h2 className="text-3xl font-bold">Sobre mim</h2>
-      <p className="mt-4">Sou Desenvolvedor de FullStack, com habilidades em desenvolvimento fullstack e ampla
-        experiência na indústria de TI. Proficiente em metodologias ágeis como Kanban e Scrum, possuo experiência em
-        diversas tecnologias, incluindo JavaScript, TypeScript, Angular, React, Next.js, NodeJs, Express, TypeORM, C#,
-        .NET, ASP.NET, .NET Core, Entity Framework. Minha abordagem se destaca pela aplicação de princípios de Código
-        Limpo e técnicas de desenvolvimento como Técncica de Desenvolvimento Orientado a Testes (TDD), SOLID, para
-        garantir soluções de software de alta qualidade, fácil manutenção.
-      </p>
+    <section id="about" className="py-20 relative overflow-hidden">
+      <div className="container mx-auto px-4 max-w-4xl relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="bg-base-200/50 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/5 shadow-2xl"
+        >
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary inline-block">
+              {t.about.title}
+            </h2>
+          </div>
+
+          <div className="prose prose-lg dark:prose-invert mx-auto text-base-content/80 leading-relaxed text-justify">
+            <p>
+              {t.about.p1}
+            </p>
+            <p className="mt-4">
+              {t.about.p2}
+            </p>
+            <p className="mt-4">
+              {t.about.p3}
+            </p>
+          </div>
+        </motion.div>
       </div>
+
+      {/* Decorative background elements */}
+      <div className="absolute top-1/2 -left-20 w-64 h-64 bg-primary/20 rounded-full blur-3xl -z-10" />
+      <div className="absolute bottom-0 -right-20 w-80 h-80 bg-secondary/10 rounded-full blur-3xl -z-10" />
     </section>
   );
 };

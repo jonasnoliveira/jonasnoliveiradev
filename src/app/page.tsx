@@ -2,6 +2,7 @@ import Head from "next/head";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Technologies from "@/components/Technologies";
 import ContactUs from "@/components/ContactUs";
@@ -12,17 +13,18 @@ const Home = () => {
     <div>
       <Head>
         <title>Jonas Oliveira - Desenvolvedor FullStack</title>
-        <meta name="description" content="Portfólio de Jonas Oliveira"/>
+        <meta name="description" content="Portfólio de Jonas Oliveira" />
       </Head>
-      <Header/>
+      <Header />
       <main>
-        <Hero/>
-        <About/>
-        <Technologies/>
+        <Hero />
+        <About />
+        <Experience />
+        <Technologies />
         <FloatingWhatsAppButton />
-        <ContactUs/>
+        <ContactUs />
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

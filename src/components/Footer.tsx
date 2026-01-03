@@ -1,32 +1,49 @@
-import {FaLinkedin, FaGithub, FaEnvelope, FaPhone} from 'react-icons/fa';
+"use client";
+
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
-    <footer className="footer footer-center bg-base-300 text-base-content rounded p-10">
-      <nav className="grid grid-flow-col gap-4 mb-6">
-        <a className="link link-hover" href={"#about"}>Sobre</a>
-        <a className="link link-hover" href={"#technologies"}>Tecnologias</a>
-        <a className="link link-hover" href={"#contactUs"}>Fale Conosco</a>
-      </nav>
-      <nav className="mb-6">
-        <div className="grid grid-flow-col gap-4">
-          <a href="tel:+5535999746431" className="text-lg hover:underline" aria-label="Número telefone para Jonas Oliveira">
-            <FaPhone className="text-2xl mr-4 text-primary"/>
+    <footer className="bg-base-300 py-12 text-base-content border-t border-base-content/10">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="text-center md:text-left">
+          <h3 className="text-2xl font-bold font-mono tracking-tighter mb-2">&lt;Jonas.Dev /&gt;</h3>
+          <p className="text-sm opacity-60">
+            © {new Date().getFullYear()} Jonas Oliveira. {t.footer.rights}
+          </p>
+        </div>
+
+        <div className="flex gap-6">
+          <a
+            href="https://www.linkedin.com/in/jonas-n-oliveira/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 bg-base-100 rounded-full hover:bg-primary hover:text-white transition-all shadow-md hover:-translate-y-1"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin size={20} />
           </a>
-          <a href="mailto:jonasnoliveirabr@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Enviar email para Jonas Oliveira">
-            <FaEnvelope className="text-2xl mr-4 text-primary"/>
+          <a
+            href="https://github.com/jonas-oliveira"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 bg-base-100 rounded-full hover:bg-primary hover:text-white transition-all shadow-md hover:-translate-y-1"
+            aria-label="GitHub"
+          >
+            <FaGithub size={20} />
           </a>
-          <a href="https://www.linkedin.com/in/jonas-n-oliveira" target="_blank" rel="noopener noreferrer" aria-label="Perfil LinkedIn de Jonas Oliveira">
-            <FaLinkedin className="text-2xl mr-4 text-primary"/>
-          </a>
-          <a href="https://github.com/jonasnoliveira" target="_blank" rel="noopener noreferrer" aria-label="Perfil GitHub de Jonas Oliveira">
-            <FaGithub className="text-2xl mr-4 text-primary"/>
+          <a
+            href="mailto:jonas.oliveira.dev@gmail.com"
+            className="p-3 bg-base-100 rounded-full hover:bg-primary hover:text-white transition-all shadow-md hover:-translate-y-1"
+            aria-label="Email"
+          >
+            <FaEnvelope size={20} />
           </a>
         </div>
-      </nav>
-      <aside>
-        <p>Copyright © {new Date().getFullYear()} - Todos os direitos reservados por Jonas Oliveira</p>
-      </aside>
+      </div>
     </footer>
   );
 };

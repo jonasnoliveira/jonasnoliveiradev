@@ -4,27 +4,40 @@
 
 :root {
   /* Valores padrão para o tema claro */
-  --foreground-rgb: 0, 0, 0; /* Texto preto */
-  --background-start-rgb: 214, 219, 220; /* Fundo claro */
-  --background-end-rgb: 255, 255, 255; /* Fundo claro */
+  --foreground-rgb: 0, 0, 0;
+  /* Texto preto */
+  --background-start-rgb: 214, 219, 220;
+  /* Fundo claro */
+  --background-end-rgb: 255, 255, 255;
+  /* Fundo claro */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     /* Valores para o tema escuro */
-    --foreground-rgb: 255, 255, 255; /* Texto branco */
-    --background-start-rgb: 0, 0, 0; /* Fundo escuro */
-    --background-end-rgb: 0, 0, 0; /* Fundo escuro */
+    --foreground-rgb: 255, 255, 255;
+    /* Texto branco */
+    --background-start-rgb: 0, 0, 0;
+    /* Fundo escuro */
+    --background-end-rgb: 0, 0, 0;
+    /* Fundo escuro */
   }
-}
-
-body {
-  color: var(--foreground-rgb);
-  background: var(--background-start-rgb);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-base-100 text-base-content antialiased selection:bg-primary selection:text-white;
 }
