@@ -23,6 +23,7 @@ import {
   SiExpress,
   SiJest
 } from 'react-icons/si';
+import { DiMsqlServer } from "react-icons/di";
 import { TbBrandNextjs } from "react-icons/tb";
 import { VscAzure, VscCircuitBoard } from "react-icons/vsc";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -63,6 +64,7 @@ const Technologies = () => {
       techs: [
         { name: 'PostgreSQL', icon: <SiPostgresql className="text-blue-700 text-4xl" /> },
         { name: 'MySQL', icon: <SiMysql className="text-blue-600 text-4xl" /> },
+        { name: 'SQL Server', icon: <DiMsqlServer className="text-red-600 text-4xl" /> },
         { name: 'TypeORM', icon: <SiTypeorm className="text-orange-500 text-4xl" /> },
         { name: 'Git', icon: <FaGit className="text-orange-500 text-4xl" /> },
         { name: 'GitHub', icon: <SiGithub className="text-white text-4xl" /> },
