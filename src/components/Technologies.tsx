@@ -18,10 +18,13 @@ import {
   SiMui,
   SiExpo,
   SiFastapi,
-  SiTensorflow
+  SiTensorflow,
+  SiNestjs,
+  SiExpress,
+  SiJest
 } from 'react-icons/si';
 import { TbBrandNextjs } from "react-icons/tb";
-import { VscAzure } from "react-icons/vsc";
+import { VscAzure, VscCircuitBoard } from "react-icons/vsc";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Technologies = () => {
@@ -32,6 +35,8 @@ const Technologies = () => {
       title: t.technologies.categories.backend,
       techs: [
         { name: 'Node.js', icon: <FaNodeJs className="text-green-500 text-4xl" /> },
+        { name: 'NestJS', icon: <SiNestjs className="text-red-500 text-4xl" /> },
+        { name: 'Express', icon: <SiExpress className="text-gray-500 text-4xl" /> },
         { name: '.NET Core', icon: <SiDotnet className="text-purple-600 text-4xl" /> },
         { name: 'C#', icon: <SiSharp className="text-blue-600 text-4xl" /> },
         { name: 'Python', icon: <FaPython className="text-yellow-500 text-4xl" /> },
@@ -62,6 +67,8 @@ const Technologies = () => {
         { name: 'Git', icon: <FaGit className="text-orange-500 text-4xl" /> },
         { name: 'GitHub', icon: <SiGithub className="text-white text-4xl" /> },
         { name: 'GitLab', icon: <SiGitlab className="text-orange-500 text-4xl" /> },
+        { name: 'CI/CD', icon: <VscCircuitBoard className="text-blue-500 text-4xl" /> },
+        { name: 'Jest', icon: <SiJest className="text-red-700 text-4xl" /> },
         { name: 'Jira', icon: <SiJira className="text-blue-500 text-4xl" /> },
         { name: 'TensorFlow', icon: <SiTensorflow className="text-orange-400 text-4xl" /> },
       ]

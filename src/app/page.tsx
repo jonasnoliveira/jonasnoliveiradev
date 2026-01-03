@@ -21,7 +21,6 @@ const Home = () => {
         <About />
         <Experience />
         <Technologies />
-        <FloatingWhatsAppButton />
         <ContactUs />
       </main>
       <Footer />

@@ -77,6 +77,46 @@ type Translations = {
     footer: {
         rights: string;
     };
+    cv: {
+        title: string;
+        role: string;
+        location: string;
+        contact: {
+            phone: string;
+            email: string;
+            linkedin: string;
+            github: string;
+            website: string;
+        };
+        summary: {
+            title: string;
+            content: string;
+        };
+        experience: {
+            title: string;
+        };
+        education: {
+            title: string;
+            items: {
+                degree: string;
+                institution: string;
+                period: string;
+            }[];
+        };
+        skills: {
+            title: string;
+            techs: string[];
+        };
+        languages: {
+            title: string;
+            items: {
+                name: string;
+                level: string;
+            }[];
+        };
+        download: string;
+        backToPortfolio: string;
+    };
 };
 
 const translations: Record<Language, Translations> = {
@@ -182,7 +222,53 @@ const translations: Record<Language, Translations> = {
         },
         footer: {
             rights: "Todos os direitos reservados.",
-        }
+        },
+        cv: {
+            title: "Currículo",
+            role: "Desenvolvedor Full Stack",
+            location: "Minas Gerais, Brasil",
+            contact: {
+                phone: "+55 (35) 99974-6431",
+                email: "jonasnoliveirabr@gmail.com",
+                linkedin: "linkedin.com/in/jonas-n-oliveira",
+                github: "github.com/jonas-oliveira",
+                website: "jonasoliveiradev.vercel.app"
+            },
+            summary: {
+                title: "Resumo Profissional",
+                content: "Desenvolvedor Full Stack com experiência no desenvolvimento end-to-end de sistemas web e mobile. Expertise em arquiteturas modernas, DevOps, Cloud Computing e metodologias ágeis. Apaixonado por inovação, qualidade de código e entrega de soluções de alto valor."
+            },
+            experience: {
+                title: "Experiência Profissional"
+            },
+            education: {
+                title: "Formação Acadêmica",
+                items: [
+                    {
+                        degree: "Ciência da Computação",
+                        institution: "Unincor",
+                        period: "2022 - 2025"
+                    }
+                ]
+            },
+            skills: {
+                title: "Competências",
+                techs: [
+                    "Node.js", "TypeScript", "React", "Next.js", "Angular",
+                    "React Native", "PostgreSQL", "MongoDB", "MySQL",
+                    "Docker", "AWS", "Azure", "CI/CD", "Git"
+                ]
+            },
+            languages: {
+                title: "Idiomas",
+                items: [
+                    { name: "Português", level: "Nativo" },
+                    { name: "Inglês", level: "Avançado" }
+                ]
+            },
+            download: "Baixar PDF",
+            backToPortfolio: "Voltar ao Portfolio"
+        },
     },
     en: {
         header: {
@@ -286,6 +372,52 @@ const translations: Record<Language, Translations> = {
         },
         footer: {
             rights: "All rights reserved.",
+        },
+        cv: {
+            title: "Curriculum Vitae",
+            role: "Full Stack Developer",
+            location: "Minas Gerais, Brazil",
+            contact: {
+                phone: "+55 (35) 99974-6431",
+                email: "jonasnoliveirabr@gmail.com",
+                linkedin: "linkedin.com/in/jonas-n-oliveira",
+                github: "github.com/jonas-oliveira",
+                website: "jonasoliveiradev.vercel.app"
+            },
+            summary: {
+                title: "Professional Summary",
+                content: "Full Stack Developer with experience in end-to-end development of web and mobile systems. Expertise in modern architectures, DevOps, Cloud Computing, and agile methodologies. Passionate about innovation, code quality, and delivering high-value solutions."
+            },
+            experience: {
+                title: "Professional Experience"
+            },
+            education: {
+                title: "Education",
+                items: [
+                    {
+                        degree: "Computer Science",
+                        institution: "Unincor",
+                        period: "2022 - 2025"
+                    }
+                ]
+            },
+            skills: {
+                title: "Skills",
+                techs: [
+                    "Node.js", "TypeScript", "React", "Next.js", "Angular",
+                    "React Native", "PostgreSQL", "MongoDB", "MySQL",
+                    "Docker", "AWS", "Azure", "CI/CD", "Git"
+                ]
+            },
+            languages: {
+                title: "Languages",
+                items: [
+                    { name: "Portuguese", level: "Native" },
+                    { name: "English", level: "Advanced" }
+                ]
+            },
+            download: "Download PDF",
+            backToPortfolio: "Back to Portfolio"
         }
     },
 };

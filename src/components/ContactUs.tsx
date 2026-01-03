@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaUser, FaPhone, FaEdit, FaPaperPlane } from 'react-icons/fa';
 import { motion } from 'framer-motion';
@@ -22,11 +23,18 @@ const ContactUs = () => {
     reset
   } = useForm<FormData>();
 
+  const [showToast, setShowToast] = useState(false);
+
   const onSubmit = async (data: FormData) => {
     const text = `*Nome:* ${data.name}%0A*Telefone:* ${data.phone}%0A*Email:* ${data.email}%0A*Assunto:* ${data.subject}%0A*Mensagem:* ${data.message}`;
-    const whatsappUrl = `https://wa.me/5535999052204?text=${text}`;
-    window.open(whatsappUrl, '_blank');
-    reset();
+    const whatsappUrl = `https://wa.me/5535999746431?text=${text}`;
+
+    setShowToast(true);
+    setTimeout(() => {
+      window.open(whatsappUrl, '_blank');
+      reset();
+      setShowToast(false);
+    }, 2000);
   };
 
   return (
@@ -60,22 +68,22 @@ const ContactUs = () => {
               <h3 className="text-2xl font-bold text-primary">{t.contact.title}</h3>
 
               <div className="space-y-6">
-                <a href="https://wa.me/5535999052204" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-lg hover:text-primary transition-colors group">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                <a href="https://wa.me/5535999746431" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-lg hover:text-primary transition-colors group">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-all">
                     <FaWhatsapp className="text-2xl" />
                   </div>
-                  <span>+55 (35) 99905-2204</span>
+                  <span className="break-all">+55 (35) 99974-6431</span>
                 </a>
 
-                <a href="mailto:jonas.oliveira.dev@gmail.com" className="flex items-center gap-4 text-lg hover:text-primary transition-colors group">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                <a href="mailto:jonasnoliveirabr@gmail.com" className="flex items-center gap-4 text-lg hover:text-primary transition-colors group">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-all">
                     <FaEnvelope className="text-2xl" />
                   </div>
-                  <span>jonas.oliveira.dev@gmail.com</span>
+                  <span className="break-all">jonasnoliveirabr@gmail.com</span>
                 </a>
 
                 <div className="flex items-center gap-4 text-lg group">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-all">
                     <FaMapMarkerAlt className="text-2xl" />
                   </div>
                   <span>{t.contact.locationValue}</span>
@@ -193,6 +201,31 @@ const ContactUs = () => {
             </form>
           </motion.div>
         </div>
+
+        {/* Floating Action Button for WhatsApp */}
+        <a
+          href="https://wa.me/5535999746431"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-6 right-6 z-50 p-4 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-all hover:scale-110 animate-bounce cursor-pointer group"
+          title="Fale comigo no WhatsApp"
+        >
+          <FaWhatsapp className="text-3xl" />
+          <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 px-2 py-1 bg-base-300 text-base-content text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            {t.contact.whatsapp}
+          </span>
+        </a>
+
+        {/* Toast Notification */}
+        {showToast && (
+          <div className="toast toast-bottom toast-center z-[100]">
+            <div className="alert alert-success text-white">
+              <FaPaperPlane />
+              <span>{t.contact.form.sending}</span>
+            </div>
+          </div>
+        )}
+
       </div>
     </section>
   );

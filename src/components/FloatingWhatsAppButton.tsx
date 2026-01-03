@@ -1,4 +1,4 @@
-import {FaWhatsapp} from 'react-icons/fa';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const FloatingWhatsAppButton = () => {
   return (
@@ -9,7 +9,7 @@ const FloatingWhatsAppButton = () => {
       className="fixed bottom-4 right-4 p-3 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300"
       aria-label="WhatsApp"
     >
-      <FaWhatsapp size={24}/>
+      <FaWhatsapp size={24} />
     </a>
   );
 };

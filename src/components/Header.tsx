@@ -19,6 +19,7 @@ const Header = () => {
     { name: t.header.about, href: "#about" },
     { name: t.header.experience, href: "#experience" },
     { name: t.header.technologies, href: "#technologies" },
+    { name: "CV", href: "/cv" }, // Direct Link to CV
     { name: t.header.contact, href: "#contactUs" },
   ];
 
